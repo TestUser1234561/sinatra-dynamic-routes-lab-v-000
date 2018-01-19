@@ -8,6 +8,6 @@ class App < Sinatra::Base
     (params[:number].to_i ** 2).to_s
   end
   get '/say/:number/:phrase' do
-    params[:number].to_i.times{ params[:phrase] }
+    params[:number].to_i.times.map{ params[:phrase] }
   end
 end
